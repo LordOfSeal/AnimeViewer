@@ -1,3 +1,8 @@
+/****************************
+** Создатель : Косов Виктор
+** Файл      : db.h
+** Дата      : 4.03.2019
+*****************************/
 #ifndef DB_H
 #define DB_H
 #include <sqlite3.h>
@@ -5,7 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-bool openDB(const char * dbName);
-void getAll();
-void closeDB();
+bool openDB(const char * dbName); // Открытие базы
+void getAll(); // Получение всех записей
+void closeDB(); // Закрытие базы данных
 #endif

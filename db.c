@@ -1,9 +1,15 @@
+/****************************
+** Создатель : Косов Виктор
+** Файл      : db.c
+** Дата      : 4.03.2019
+*****************************/
 #include "db.h"
 
-int rc;
-sqlite3 *db;
-char *zErrMsg;
-sqlite3_stmt *stmt;
+int rc; // Код возврата
+sqlite3 *db; // Хэндлер базы данных
+char *zErrMsg; // Сообщение оь ошибке
+sqlite3_stmt *stmt; // Хэндлер состояния
+
 bool openDB(const char* name)
 {
 	rc = sqlite3_open(name,&db);
