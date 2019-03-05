@@ -36,3 +36,13 @@ void getAll()
 	sqlite3_finalize(stmt);
 	free(query);
 }
+
+void insertField(const char * name)
+{
+	char *query = NULL;
+	asprintf(&query,"INSERT INTO anime(name) VALUES('%s');",name);
+	sqlite3_prepare(db,query,-1,&stmt,NULL);
+	rc = sqlite3_step(stmt);
+	sqlite3_finalize(stmt);
+	free(query);
+}
